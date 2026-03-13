@@ -1,503 +1,787 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Institute of Digital Risk</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- ─── NAV ──────────────────────────────────────────────── -->
-  <nav>
-    <a href="#hero" class="nav-brand">
-      <!-- Icon only logo -->
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="18,2 34,11 34,25 18,34 2,25 2,11" fill="none" stroke="#F55A00" stroke-width="2"/>
-        <polygon points="18,8 28,14 28,22 18,28 8,22 8,14" fill="rgba(245,90,0,0.15)" stroke="#F55A00" stroke-width="1.5"/>
-        <line x1="18" y1="2"  x2="18" y2="8"  stroke="#F55A00" stroke-width="1.5"/>
-        <line x1="34" y1="11" x2="28" y2="14" stroke="#F55A00" stroke-width="1.5"/>
-        <line x1="34" y1="25" x2="28" y2="22" stroke="#F55A00" stroke-width="1.5"/>
-        <line x1="18" y1="34" x2="18" y2="28" stroke="#F55A00" stroke-width="1.5"/>
-        <line x1="2"  y1="25" x2="8"  y2="22" stroke="#F55A00" stroke-width="1.5"/>
-        <line x1="2"  y1="11" x2="8"  y2="14" stroke="#F55A00" stroke-width="1.5"/>
-        <circle cx="18" cy="18" r="3" fill="#F55A00"/>
-      </svg>
-      <div class="nav-brand-text">IDR <span>/</span> Institute of Digital Risk</div>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#community">Community</a></li>
-      <li><a href="#contact" class="nav-cta">Register Interest</a></li>
-    </ul>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#services" onclick="closeMobile()">Services</a>
-    <a href="#community" onclick="closeMobile()">Community</a>
-    <a href="#contact" onclick="closeMobile()">Register Interest</a>
-  </div>
-
-  <main>
-
-    <!-- ─── HERO ──────────────────────────────────────────── -->
-    <section id="hero">
-      <div class="hero-bg"></div>
-
-      <div class="hero-inner">
-        <div class="hero-content">
-          <p class="hero-label">Est. 2024 · UK-Based</p>
-          <h1 class="hero-headline">
-            Advancing<br/>the <em>Future</em><br/>of Digital<br/>Risk
-          </h1>
-          <p class="hero-sub">
-            IDR trains and deploys the next generation of digital risk practitioners — bridging academic rigour with industry practice across cyber, AI, and technology risk.
-          </p>
-          <div class="hero-actions">
-            <a href="#services" class="btn-primary">Explore Programs</a>
-            <a href="#contact" class="btn-ghost">Hire Talent</a>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Institute of Digital Risk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ─── NAV ──────────────────────────────────────────────── -->
+    <nav class="main-nav">
+      <a href="#hero" class="nav-brand">
+        <!-- Icon only logo -->
+        <div class="logo-container">
+          <img src="IDR_logo-removebg-preview.png" alt="IDR Logo"
+            class="logo-img">
         </div>
-
-        <div class="hero-visual">
-          <div class="cube-wrap">
-            <!-- Large hero cube SVG -->
-            <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Outer ring -->
-              <polygon points="160,20 300,100 300,220 160,300 20,220 20,100"
-                fill="none" stroke="rgba(245,90,0,0.3)" stroke-width="1.5"/>
-              <!-- Middle ring -->
-              <polygon points="160,55 265,115 265,205 160,265 55,205 55,115"
-                fill="none" stroke="rgba(245,90,0,0.5)" stroke-width="1.5"/>
-              <!-- Inner filled hex -->
-              <polygon points="160,90 230,130 230,190 160,230 90,190 90,130"
-                fill="rgba(245,90,0,0.08)" stroke="#F55A00" stroke-width="2"/>
-              <!-- Corner connectors outer->mid -->
-              <line x1="160" y1="20" x2="160" y2="55" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <line x1="300" y1="100" x2="265" y2="115" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <line x1="300" y1="220" x2="265" y2="205" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <line x1="160" y1="300" x2="160" y2="265" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <line x1="20" y1="220" x2="55" y2="205" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <line x1="20" y1="100" x2="55" y2="115" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <!-- Corner connectors mid->inner -->
-              <line x1="160" y1="55" x2="160" y2="90" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="265" y1="115" x2="230" y2="130" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="265" y1="205" x2="230" y2="190" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="160" y1="265" x2="160" y2="230" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="55" y1="205" x2="90" y2="190" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="55" y1="115" x2="90" y2="130" stroke="#F55A00" stroke-width="1.5"/>
-              <!-- Cross lines through centre -->
-              <line x1="160" y1="90" x2="160" y2="230" stroke="rgba(245,90,0,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
-              <line x1="90" y1="130" x2="230" y2="190" stroke="rgba(245,90,0,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
-              <line x1="230" y1="130" x2="90" y2="190" stroke="rgba(245,90,0,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
-              <!-- Centre node -->
-              <circle cx="160" cy="160" r="10" fill="#F55A00"/>
-              <circle cx="160" cy="160" r="20" fill="none" stroke="rgba(245,90,0,0.4)" stroke-width="1"/>
-              <!-- Corner dots -->
-              <circle cx="160" cy="90"  r="4" fill="#F55A00"/>
-              <circle cx="230" cy="130" r="4" fill="#F55A00"/>
-              <circle cx="230" cy="190" r="4" fill="#F55A00"/>
-              <circle cx="160" cy="230" r="4" fill="#F55A00"/>
-              <circle cx="90"  cy="190" r="4" fill="#F55A00"/>
-              <circle cx="90"  cy="130" r="4" fill="#F55A00"/>
-              <!-- IDR text in centre -->
-              <text x="160" y="167" text-anchor="middle"
-                font-family="'Barlow Condensed',sans-serif"
-                font-weight="800" font-size="18"
-                fill="rgba(255,255,255,0.7)" letter-spacing="3">IDR</text>
-            </svg>
-          </div>
+        <div class="nav-brand-text">
+          IDR <span>/</span> Institute of Digital Risk
         </div>
-      </div>
+      </a>
 
-      <!-- Stats bar -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">500+</div>
-          <div class="stat-label">Practitioners Trained</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">Industry Partners</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">3</div>
-          <div class="stat-label">UK University Collaborations</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">95%</div>
-          <div class="stat-label">Graduate Placement Rate</div>
-        </div>
-      </div>
-    </section>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact" class="nav-cta">Register Interest</a></li>
+      </ul>
 
-    <!-- ─── ABOUT ──────────────────────────────────────────── -->
-    <section id="about">
-      <div class="section">
-        <div class="about-inner">
-          <div class="about-left">
-            <p class="section-label">About IDR</p>
-            <h2 class="section-title">Industry-Led.<br/><em>Impact</em>-Driven.</h2>
-            <p class="about-text">
-              The Institute of Digital Risk is an industry-led training and deployment institute purpose-built for digital, cyber, and technology risk. We exist to close the widening gap between academic knowledge and the practical skills demanded by regulated, high-consequence environments — from financial services to critical national infrastructure.
-            </p>
-            <p class="about-text">
-              Through deep partnerships with leading UK universities and private sector organisations, IDR develops and deploys risk practitioners who are technically fluent, commercially aware, and ready to operate from day one. Our programmes blend rigorous academic frameworks with live project experience, producing talent that doesn't just understand risk — it manages it.
-            </p>
-            <a href="#services" class="btn-primary" style="margin-top:8px;">Our Model</a>
-          </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-          <div class="about-right reveal">
-            <div class="about-badge">
-              <div class="about-badge-title">🎓 Academic Partnership</div>
-              <p>Collaborating with leading UK universities to embed research-grade thinking into every programme — from threat modelling to AI governance.</p>
-            </div>
-            <div class="about-badge">
-              <div class="about-badge-title">🏭 Industry Practice</div>
-              <p>Every IDR cohort works on real projects with real organisations. No simulations. No hypotheticals. Real risk, real consequence.</p>
-            </div>
-            <div class="about-badge">
-              <div class="about-badge-title">🚀 Deployment Ready</div>
-              <p>Graduates are placed directly into roles across financial services, defence, and critical infrastructure — assessed and vouched for by IDR.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── SERVICES ───────────────────────────────────────── -->
-    <section id="services">
-      <div class="section">
-        <div class="services-header">
-          <div>
-            <p class="section-label">Our Model</p>
-            <h2 class="section-title">Three Pillars.<br/><em>One Mission.</em></h2>
-          </div>
-          <p class="services-intro">
-            IDR operates across three interconnected service lines — each designed to move the field of digital risk forward, together.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <!-- Academy -->
-          <div class="service-card reveal">
-            <div class="card-num">01</div>
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="20" width="40" height="24" rx="1" stroke="#F55A00" stroke-width="2"/>
-              <polygon points="24,4 44,16 4,16" fill="none" stroke="#F55A00" stroke-width="2"/>
-              <rect x="18" y="30" width="12" height="14" stroke="#F55A00" stroke-width="1.5"/>
-            </svg>
-            <h3 class="card-title">Academy</h3>
-            <p class="card-body">
-              Intensive training programmes and bootcamps for students and working professionals. Covering digital risk fundamentals through to advanced threat intelligence, AI risk, and regulatory frameworks.
-            </p>
-            <div class="card-tags">
-              <span class="tag">Bootcamps</span>
-              <span class="tag">Upskilling</span>
-              <span class="tag">CPD</span>
-              <span class="tag">Certifications</span>
-            </div>
-          </div>
-
-          <!-- Innovation -->
-          <div class="service-card reveal reveal-delay-1">
-            <div class="card-num">02</div>
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="18" stroke="#F55A00" stroke-width="2"/>
-              <circle cx="24" cy="24" r="8" fill="rgba(245,90,0,0.15)" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="24" y1="6"  x2="24" y2="16" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="24" y1="32" x2="24" y2="42" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="6"  y1="24" x2="16" y2="24" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="32" y1="24" x2="42" y2="24" stroke="#F55A00" stroke-width="1.5"/>
-            </svg>
-            <h3 class="card-title">Innovation &amp; Incubation</h3>
-            <p class="card-body">
-              Developing next-generation IP, future risk frameworks, and AI governance models. IDR's innovation lab partners with academia and industry to create tools and methodologies that define the next decade of digital risk.
-            </p>
-            <div class="card-tags">
-              <span class="tag">AI Governance</span>
-              <span class="tag">IP Development</span>
-              <span class="tag">Research</span>
-            </div>
-          </div>
-
-          <!-- Advisory -->
-          <div class="service-card reveal reveal-delay-2">
-            <div class="card-num">03</div>
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="6" width="36" height="36" rx="1" stroke="#F55A00" stroke-width="2"/>
-              <line x1="14" y1="20" x2="34" y2="20" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="14" y1="28" x2="28" y2="28" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="14" y1="36" x2="22" y2="36" stroke="#F55A00" stroke-width="1.5"/>
-              <rect x="14" y="10" width="20" height="6" fill="rgba(245,90,0,0.2)" stroke="#F55A00" stroke-width="1"/>
-            </svg>
-            <h3 class="card-title">Advisory Services</h3>
-            <p class="card-body">
-              Supporting organisations in implementing world-class risk and cyber frameworks. From NIST and ISO 27001 to NIS2 compliance and bespoke AI risk assessments — we help regulated businesses get it right.
-            </p>
-            <div class="card-tags">
-              <span class="tag">NIST</span>
-              <span class="tag">ISO 27001</span>
-              <span class="tag">NIS2</span>
-              <span class="tag">AI Risk</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pipeline -->
-        <div class="pipeline reveal">
-          <div class="pipe-step">
-            <div class="pipe-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="13" width="18" height="8" rx="1" stroke="#F55A00" stroke-width="1.5"/>
-                <polygon points="12,3 20,11 4,11" fill="none" stroke="#F55A00" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <div class="pipe-name">Train</div>
-            <div class="pipe-desc">Intensive, applied learning</div>
-          </div>
-          <div class="pipe-step">
-            <div class="pipe-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="8" r="4" stroke="#F55A00" stroke-width="1.5"/>
-                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#F55A00" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="pipe-name">Hire</div>
-            <div class="pipe-desc">Place in partner organisations</div>
-          </div>
-          <div class="pipe-step">
-            <div class="pipe-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <polygon points="12,2 22,20 2,20" fill="none" stroke="#F55A00" stroke-width="1.5"/>
-                <line x1="12" y1="9" x2="12" y2="14" stroke="#F55A00" stroke-width="1.5"/>
-                <circle cx="12" cy="17" r="1" fill="#F55A00"/>
-              </svg>
-            </div>
-            <div class="pipe-name">Innovate</div>
-            <div class="pipe-desc">Build new IP and frameworks</div>
-          </div>
-          <div class="pipe-step">
-            <div class="pipe-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="9" stroke="#F55A00" stroke-width="1.5"/>
-                <polyline points="8,12 11,15 16,9" stroke="#F55A00" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="pipe-name">Deploy</div>
-            <div class="pipe-desc">Real-world impact at scale</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── COMMUNITY ─────────────────────────────────────── -->
-    <section id="community">
-      <div class="section">
-        <div class="community-inner">
-          <div class="community-left">
-            <p class="section-label">Who We Serve</p>
-            <h2 class="section-title">Built for a<br/><em>Community</em>.</h2>
-            <p class="community-text">
-              IDR brings together a diverse community of individuals and organisations unified by a shared need: to understand, manage, and mitigate risk in an increasingly complex digital world. Whether you're entering the field or leading a team within regulated infrastructure, IDR is built for you.
-            </p>
-            <div class="audience-list reveal">
-              <div class="audience-item"><div class="audience-dot"></div><span>University Students</span></div>
-              <div class="audience-item"><div class="audience-dot"></div><span>Early-Career Pros</span></div>
-              <div class="audience-item"><div class="audience-dot"></div><span>Risk Practitioners</span></div>
-              <div class="audience-item"><div class="audience-dot"></div><span>Security Teams</span></div>
-              <div class="audience-item"><div class="audience-dot"></div><span>Compliance Officers</span></div>
-              <div class="audience-item"><div class="audience-dot"></div><span>CISOs &amp; CDOs</span></div>
-            </div>
-          </div>
-
-          <div class="community-right reveal">
-            <div class="sector-card">
-              <div class="sector-icon">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <rect x="2" y="10" width="18" height="10" stroke="#F55A00" stroke-width="1.5"/>
-                  <polygon points="11,2 20,10 2,10" fill="none" stroke="#F55A00" stroke-width="1.5"/>
-                  <rect x="8" y="14" width="6" height="6" stroke="#F55A00" stroke-width="1"/>
-                </svg>
-              </div>
-              <div class="sector-content">
-                <h4>Financial Services</h4>
-                <p>Banking, insurance, asset management and payments — environments where digital risk has systemic, regulatory and reputational consequences.</p>
-              </div>
-            </div>
-            <div class="sector-card">
-              <div class="sector-icon">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <rect x="2" y="2" width="18" height="18" rx="1" stroke="#F55A00" stroke-width="1.5"/>
-                  <line x1="2" y1="8" x2="20" y2="8" stroke="#F55A00" stroke-width="1"/>
-                  <line x1="11" y1="8" x2="11" y2="20" stroke="#F55A00" stroke-width="1"/>
-                </svg>
-              </div>
-              <div class="sector-content">
-                <h4>Critical Infrastructure</h4>
-                <p>Energy, utilities, transport and telecoms — sectors where a digital breach carries physical and national security implications.</p>
-              </div>
-            </div>
-            <div class="sector-card">
-              <div class="sector-icon">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <circle cx="11" cy="11" r="9" stroke="#F55A00" stroke-width="1.5"/>
-                  <line x1="11" y1="2" x2="11" y2="20" stroke="#F55A00" stroke-width="1"/>
-                  <ellipse cx="11" cy="11" rx="5" ry="9" stroke="#F55A00" stroke-width="1"/>
-                </svg>
-              </div>
-              <div class="sector-content">
-                <h4>Public Sector &amp; Defence</h4>
-                <p>Government bodies, defence agencies and NHS organisations building cyber resilience against sophisticated adversaries.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── CONTACT ────────────────────────────────────────── -->
-    <section id="contact">
-      <div class="section">
-        <div class="contact-inner">
-          <div class="contact-left">
-            <p class="section-label">Get Involved</p>
-            <h2 class="section-title">Register<br/><em>Interest.</em></h2>
-            <p>Whether you're an organisation looking to hire trained digital risk talent, a professional seeking to upskill, or a student ready to launch your career — we'd like to hear from you.</p>
-
-            <div class="contact-info-item">
-              <div>
-                <strong>Email</strong>
-                info@digitalrisk.institute
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div>
-                <strong>Location</strong>
-                London, United Kingdom
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div>
-                <strong>University Partnership</strong>
-                UK Academic Collaborations
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-right reveal">
-            <form onsubmit="handleSubmit(event)">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="fname" placeholder="Jane" required />
-                </div>
-                <div class="form-group">
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lname" placeholder="Smith" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="jane@organisation.com" required />
-              </div>
-              <div class="form-group">
-                <label for="interest">I am interested as a…</label>
-                <select id="interest" name="interest">
-                  <option value="">Select one</option>
-                  <option>Student / Graduate</option>
-                  <option>Early-Career Professional</option>
-                  <option>Experienced Practitioner</option>
-                  <option>Hiring Organisation</option>
-                  <option>Academic / Researcher</option>
-                  <option>Partner / Investor</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us a bit about what you're looking for…"></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Register Interest →</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ─── FOOTER ─────────────────────────────────────────── -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#hero" class="nav-brand" style="margin-bottom:0">
-            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
-              <polygon points="18,2 34,11 34,25 18,34 2,25 2,11" fill="none" stroke="#F55A00" stroke-width="2"/>
-              <polygon points="18,8 28,14 28,22 18,28 8,22 8,14" fill="rgba(245,90,0,0.15)" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="18" y1="2"  x2="18" y2="8"  stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="34" y1="11" x2="28" y2="14" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="34" y1="25" x2="28" y2="22" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="18" y1="34" x2="18" y2="28" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="2"  y1="25" x2="8"  y2="22" stroke="#F55A00" stroke-width="1.5"/>
-              <line x1="2"  y1="11" x2="8"  y2="14" stroke="#F55A00" stroke-width="1.5"/>
-              <circle cx="18" cy="18" r="3" fill="#F55A00"/>
-            </svg>
-            <div class="nav-brand-text" style="font-size:16px">Institute of<br/>Digital Risk</div>
-          </a>
-          <p>An industry-led training and deployment institute for digital, cyber and technology risk professionals in regulated environments.</p>
-        </div>
-
-        <nav class="footer-nav">
-          <h5>Institute</h5>
-          <ul>
-            <li><a href="#about">About IDR</a></li>
-            <li><a href="#services">Our Model</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-nav">
-          <h5>Programs</h5>
-          <ul>
-            <li><a href="#services">Academy</a></li>
-            <li><a href="#services">Innovation Lab</a></li>
-            <li><a href="#services">Advisory</a></li>
-            <li><a href="#contact">Hire Talent</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-nav">
-          <h5>Frameworks</h5>
-          <ul>
-            <li><a href="#services">NIST CSF</a></li>
-            <li><a href="#services">ISO 27001</a></li>
-            <li><a href="#services">NIS2</a></li>
-            <li><a href="#services">AI Governance</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 Institute of Digital Risk. All rights reserved.</p>
-        <p>Designed with <span>▲</span> for the digital risk community.</p>
-      </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#services" onclick="closeMobile()">Services</a>
+      <a href="#community" onclick="closeMobile()">Community</a>
+      <a href="#contact" onclick="closeMobile()">Register Interest</a>
     </div>
-  </footer>
-<script src="script.js">
-</script>
 
-</body>
+    <main>
+      <!-- ─── HERO ──────────────────────────────────────────── -->
+      <section id="hero">
+        <div class="hero-bg"></div>
+
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="hero-label">Est. 2024 · UK-Based</p>
+            <h1 class="hero-headline">
+              Advancing<br />the <em>Future</em><br />of Digital<br />Risk
+            </h1>
+            <p class="hero-sub">
+              IDR trains and deploys the next generation of digital risk
+              practitioners — bridging academic rigour with industry practice
+              across cyber, AI, and technology risk.
+            </p>
+            <div class="hero-actions">
+              <a href="#services" class="btn-primary">Explore Programs</a>
+              <a href="#contact" class="btn-ghost">Hire Talent</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="cube-wrap">
+              <div>
+                <img src="IDR_logo-removebg-preview.png" alt="IDR_LOGO">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Practitioners Trained</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">12+</div>
+            <div class="stat-label">Industry Partners</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">3</div>
+            <div class="stat-label">UK University Collaborations</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">95%</div>
+            <div class="stat-label">Graduate Placement Rate</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── ABOUT ──────────────────────────────────────────── -->
+      <section id="about">
+        <div class="section">
+          <div class="about-inner">
+            <div class="about-left">
+              <p class="section-label">About IDR</p>
+              <h2 class="section-title">
+                Industry-Led.<br /><em>Impact</em>-Driven.
+              </h2>
+              <p class="about-text">
+                The Institute of Digital Risk is an industry-led training and
+                deployment institute purpose-built for digital, cyber, and
+                technology risk. We exist to close the widening gap between
+                academic knowledge and the practical skills demanded by
+                regulated, high-consequence environments — from financial
+                services to critical national infrastructure.
+              </p>
+              <p class="about-text">
+                Through deep partnerships with leading UK universities and
+                private sector organisations, IDR develops and deploys risk
+                practitioners who are technically fluent, commercially aware,
+                and ready to operate from day one. Our programmes blend rigorous
+                academic frameworks with live project experience, producing
+                talent that doesn't just understand risk — it manages it.
+              </p>
+              <a href="#services" class="btn-primary"
+                style="margin-top: 8px">Our Model</a>
+            </div>
+
+            <div class="about-right reveal">
+              <div class="about-badge">
+                <div class="about-badge-title">🎓 Academic Partnership</div>
+                <p>
+                  Collaborating with leading UK universities to embed
+                  research-grade thinking into every programme — from threat
+                  modelling to AI governance.
+                </p>
+              </div>
+              <div class="about-badge">
+                <div class="about-badge-title">🏭 Industry Practice</div>
+                <p>
+                  Every IDR cohort works on real projects with real
+                  organisations. No simulations. No hypotheticals. Real risk,
+                  real consequence.
+                </p>
+              </div>
+              <div class="about-badge">
+                <div class="about-badge-title">🚀 Deployment Ready</div>
+                <p>
+                  Graduates are placed directly into roles across financial
+                  services, defence, and critical infrastructure — assessed and
+                  vouched for by IDR.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── SERVICES ───────────────────────────────────────── -->
+      <section id="services">
+        <div class="section">
+          <div class="services-header">
+            <div>
+              <p class="section-label">Our Model</p>
+              <h2 class="section-title">
+                Three Pillars.<br /><em>One Mission.</em>
+              </h2>
+            </div>
+            <p class="services-intro">
+              IDR operates across three interconnected service lines — each
+              designed to move the field of digital risk forward, together.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Academy -->
+            <div class="service-card reveal">
+              <div class="card-num">01</div>
+              <svg
+                class="card-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  x="4"
+                  y="20"
+                  width="40"
+                  height="24"
+                  rx="1"
+                  stroke="#F55A00"
+                  stroke-width="2" />
+                <polygon
+                  points="24,4 44,16 4,16"
+                  fill="none"
+                  stroke="#F55A00"
+                  stroke-width="2" />
+                <rect
+                  x="18"
+                  y="30"
+                  width="12"
+                  height="14"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+              </svg>
+              <h3 class="card-title">Academy</h3>
+              <p class="card-body">
+                Intensive training programmes and bootcamps for students and
+                working professionals. Covering digital risk fundamentals
+                through to advanced threat intelligence, AI risk, and regulatory
+                frameworks.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Bootcamps</span>
+                <span class="tag">Upskilling</span>
+                <span class="tag">CPD</span>
+                <span class="tag">Certifications</span>
+              </div>
+            </div>
+
+            <!-- Innovation -->
+            <div class="service-card reveal reveal-delay-1">
+              <div class="card-num">02</div>
+              <svg
+                class="card-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="18"
+                  stroke="#F55A00"
+                  stroke-width="2" />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="8"
+                  fill="rgba(245,90,0,0.15)"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="24"
+                  y1="6"
+                  x2="24"
+                  y2="16"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="24"
+                  y1="32"
+                  x2="24"
+                  y2="42"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="6"
+                  y1="24"
+                  x2="16"
+                  y2="24"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="32"
+                  y1="24"
+                  x2="42"
+                  y2="24"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+              </svg>
+              <h3 class="card-title">Innovation &amp; Incubation</h3>
+              <p class="card-body">
+                Developing next-generation IP, future risk frameworks, and AI
+                governance models. IDR's innovation lab partners with academia
+                and industry to create tools and methodologies that define the
+                next decade of digital risk.
+              </p>
+              <div class="card-tags">
+                <span class="tag">AI Governance</span>
+                <span class="tag">IP Development</span>
+                <span class="tag">Research</span>
+              </div>
+            </div>
+
+            <!-- Advisory -->
+            <div class="service-card reveal reveal-delay-2">
+              <div class="card-num">03</div>
+              <svg
+                class="card-icon"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  x="6"
+                  y="6"
+                  width="36"
+                  height="36"
+                  rx="1"
+                  stroke="#F55A00"
+                  stroke-width="2" />
+                <line
+                  x1="14"
+                  y1="20"
+                  x2="34"
+                  y2="20"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="14"
+                  y1="28"
+                  x2="28"
+                  y2="28"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="14"
+                  y1="36"
+                  x2="22"
+                  y2="36"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <rect
+                  x="14"
+                  y="10"
+                  width="20"
+                  height="6"
+                  fill="rgba(245,90,0,0.2)"
+                  stroke="#F55A00"
+                  stroke-width="1" />
+              </svg>
+              <h3 class="card-title">Advisory Services</h3>
+              <p class="card-body">
+                Supporting organisations in implementing world-class risk and
+                cyber frameworks. From NIST and ISO 27001 to NIS2 compliance and
+                bespoke AI risk assessments — we help regulated businesses get
+                it right.
+              </p>
+              <div class="card-tags">
+                <span class="tag">NIST</span>
+                <span class="tag">ISO 27001</span>
+                <span class="tag">NIS2</span>
+                <span class="tag">AI Risk</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipeline -->
+          <div class="pipeline reveal">
+            <div class="pipe-step">
+              <div class="pipe-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="13"
+                    width="18"
+                    height="8"
+                    rx="1"
+                    stroke="#F55A00"
+                    stroke-width="1.5" />
+                  <polygon
+                    points="12,3 20,11 4,11"
+                    fill="none"
+                    stroke="#F55A00"
+                    stroke-width="1.5" />
+                </svg>
+              </div>
+              <div class="pipe-name">Train</div>
+              <div class="pipe-desc">Intensive, applied learning</div>
+            </div>
+            <div class="pipe-step">
+              <div class="pipe-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="12"
+                    cy="8"
+                    r="4"
+                    stroke="#F55A00"
+                    stroke-width="1.5" />
+                  <path
+                    d="M4 20c0-4 3.6-7 8-7s8 3 8 7"
+                    stroke="#F55A00"
+                    stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="pipe-name">Hire</div>
+              <div class="pipe-desc">Place in partner organisations</div>
+            </div>
+            <div class="pipe-step">
+              <div class="pipe-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <polygon
+                    points="12,2 22,20 2,20"
+                    fill="none"
+                    stroke="#F55A00"
+                    stroke-width="1.5" />
+                  <line
+                    x1="12"
+                    y1="9"
+                    x2="12"
+                    y2="14"
+                    stroke="#F55A00"
+                    stroke-width="1.5" />
+                  <circle cx="12" cy="17" r="1" fill="#F55A00" />
+                </svg>
+              </div>
+              <div class="pipe-name">Innovate</div>
+              <div class="pipe-desc">Build new IP and frameworks</div>
+            </div>
+            <div class="pipe-step">
+              <div class="pipe-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="#F55A00"
+                    stroke-width="1.5" />
+                  <polyline
+                    points="8,12 11,15 16,9"
+                    stroke="#F55A00"
+                    stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="pipe-name">Deploy</div>
+              <div class="pipe-desc">Real-world impact at scale</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── COMMUNITY ─────────────────────────────────────── -->
+      <section id="community">
+        <div class="section">
+          <div class="community-inner">
+            <div class="community-left">
+              <p class="section-label">Who We Serve</p>
+              <h2 class="section-title">
+                Built for a<br /><em>Community</em>.
+              </h2>
+              <p class="community-text">
+                IDR brings together a diverse community of individuals and
+                organisations unified by a shared need: to understand, manage,
+                and mitigate risk in an increasingly complex digital world.
+                Whether you're entering the field or leading a team within
+                regulated infrastructure, IDR is built for you.
+              </p>
+              <div class="audience-list reveal">
+                <div class="audience-item">
+                  <div class="audience-dot"></div>
+                  <span>University Students</span>
+                </div>
+                <div class="audience-item">
+                  <div class="audience-dot"></div>
+                  <span>Early-Career Pros</span>
+                </div>
+                <div class="audience-item">
+                  <div class="audience-dot"></div>
+                  <span>Risk Practitioners</span>
+                </div>
+                <div class="audience-item">
+                  <div class="audience-dot"></div>
+                  <span>Security Teams</span>
+                </div>
+                <div class="audience-item">
+                  <div class="audience-dot"></div>
+                  <span>Compliance Officers</span>
+                </div>
+                <div class="audience-item">
+                  <div class="audience-dot"></div>
+                  <span>CISOs &amp; CDOs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="community-right reveal">
+              <div class="sector-card">
+                <div class="sector-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect
+                      x="2"
+                      y="10"
+                      width="18"
+                      height="10"
+                      stroke="#F55A00"
+                      stroke-width="1.5" />
+                    <polygon
+                      points="11,2 20,10 2,10"
+                      fill="none"
+                      stroke="#F55A00"
+                      stroke-width="1.5" />
+                    <rect
+                      x="8"
+                      y="14"
+                      width="6"
+                      height="6"
+                      stroke="#F55A00"
+                      stroke-width="1" />
+                  </svg>
+                </div>
+                <div class="sector-content">
+                  <h4>Financial Services</h4>
+                  <p>
+                    Banking, insurance, asset management and payments —
+                    environments where digital risk has systemic, regulatory and
+                    reputational consequences.
+                  </p>
+                </div>
+              </div>
+              <div class="sector-card">
+                <div class="sector-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect
+                      x="2"
+                      y="2"
+                      width="18"
+                      height="18"
+                      rx="1"
+                      stroke="#F55A00"
+                      stroke-width="1.5" />
+                    <line
+                      x1="2"
+                      y1="8"
+                      x2="20"
+                      y2="8"
+                      stroke="#F55A00"
+                      stroke-width="1" />
+                    <line
+                      x1="11"
+                      y1="8"
+                      x2="11"
+                      y2="20"
+                      stroke="#F55A00"
+                      stroke-width="1" />
+                  </svg>
+                </div>
+                <div class="sector-content">
+                  <h4>Critical Infrastructure</h4>
+                  <p>
+                    Energy, utilities, transport and telecoms — sectors where a
+                    digital breach carries physical and national security
+                    implications.
+                  </p>
+                </div>
+              </div>
+              <div class="sector-card">
+                <div class="sector-icon">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="9"
+                      stroke="#F55A00"
+                      stroke-width="1.5" />
+                    <line
+                      x1="11"
+                      y1="2"
+                      x2="11"
+                      y2="20"
+                      stroke="#F55A00"
+                      stroke-width="1" />
+                    <ellipse
+                      cx="11"
+                      cy="11"
+                      rx="5"
+                      ry="9"
+                      stroke="#F55A00"
+                      stroke-width="1" />
+                  </svg>
+                </div>
+                <div class="sector-content">
+                  <h4>Public Sector &amp; Defence</h4>
+                  <p>
+                    Government bodies, defence agencies and NHS organisations
+                    building cyber resilience against sophisticated adversaries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ────────────────────────────────────────── -->
+      <section id="contact">
+        <div class="section">
+          <div class="contact-inner">
+            <div class="contact-left">
+              <p class="section-label">Get Involved</p>
+              <h2 class="section-title">Register<br /><em>Interest.</em></h2>
+              <p>
+                Whether you're an organisation looking to hire trained digital
+                risk talent, a professional seeking to upskill, or a student
+                ready to launch your career — we'd like to hear from you.
+              </p>
+
+              <div class="contact-info-item">
+                <div>
+                  <strong>Email</strong>
+                  info@digitalrisk.institute
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div>
+                  <strong>Location</strong>
+                  London, United Kingdom
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div>
+                  <strong>University Partnership</strong>
+                  UK Academic Collaborations
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-right reveal">
+              <form onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input
+                      type="text"
+                      id="fname"
+                      name="fname"
+                      placeholder="Jane"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input
+                      type="text"
+                      id="lname"
+                      name="lname"
+                      placeholder="Smith"
+                      required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="jane@organisation.com"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="interest">I am interested as a…</label>
+                  <select id="interest" name="interest">
+                    <option value>Select one</option>
+                    <option>Student / Graduate</option>
+                    <option>Early-Career Professional</option>
+                    <option>Experienced Practitioner</option>
+                    <option>Hiring Organisation</option>
+                    <option>Academic / Researcher</option>
+                    <option>Partner / Investor</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us a bit about what you're looking for…"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                  Register Interest →
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ─── FOOTER ─────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-brand" style="margin-bottom: 0">
+              <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                <polygon
+                  points="18,2 34,11 34,25 18,34 2,25 2,11"
+                  fill="none"
+                  stroke="#F55A00"
+                  stroke-width="2" />
+                <polygon
+                  points="18,8 28,14 28,22 18,28 8,22 8,14"
+                  fill="rgba(245,90,0,0.15)"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="18"
+                  y1="2"
+                  x2="18"
+                  y2="8"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="34"
+                  y1="11"
+                  x2="28"
+                  y2="14"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="34"
+                  y1="25"
+                  x2="28"
+                  y2="22"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="18"
+                  y1="34"
+                  x2="18"
+                  y2="28"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="2"
+                  y1="25"
+                  x2="8"
+                  y2="22"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <line
+                  x1="2"
+                  y1="11"
+                  x2="8"
+                  y2="14"
+                  stroke="#F55A00"
+                  stroke-width="1.5" />
+                <circle cx="18" cy="18" r="3" fill="#F55A00" />
+              </svg>
+              <div class="nav-brand-text" style="font-size: 16px">
+                Institute of<br />Digital Risk
+              </div>
+            </a>
+            <p>
+              An industry-led training and deployment institute for digital,
+              cyber and technology risk professionals in regulated environments.
+            </p>
+          </div>
+
+          <nav class="footer-nav">
+            <h5>Institute</h5>
+            <ul>
+              <li><a href="#about">About IDR</a></li>
+              <li><a href="#services">Our Model</a></li>
+              <li><a href="#community">Community</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-nav">
+            <h5>Programs</h5>
+            <ul>
+              <li><a href="#services">Academy</a></li>
+              <li><a href="#services">Innovation Lab</a></li>
+              <li><a href="#services">Advisory</a></li>
+              <li><a href="#contact">Hire Talent</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-nav">
+            <h5>Frameworks</h5>
+            <ul>
+              <li><a href="#services">NIST CSF</a></li>
+              <li><a href="#services">ISO 27001</a></li>
+              <li><a href="#services">NIS2</a></li>
+              <li><a href="#services">AI Governance</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Institute of Digital Risk. All rights reserved.</p>
+          <p>Designed with <span>▲</span> for the digital risk community.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
